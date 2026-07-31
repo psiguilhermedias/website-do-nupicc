@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#f7f4ef"/>
+  <circle cx="200" cy="180" r="78" fill="#c89bc8" opacity="0.85"/>
+  <ellipse cx="200" cy="400" rx="130" ry="110" fill="#c89bc8" opacity="0.85"/>
+  <text x="200" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#3c393c" opacity="0.55">M1</text>
+</svg>

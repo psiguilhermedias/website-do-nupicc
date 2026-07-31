@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="NUPICC — Galeria / Gallery" />
+    <title>NUPICC — Galeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-title-key="meta.title.gallery">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/images/logo.png" alt="" width="32" height="32" />NU<span>PICC</span></a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          data-i18n-aria="nav.toggle"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+            <li><a href="team.html" data-i18n="nav.team">Equipe</a></li>
+            <li><a href="research.html" data-i18n="nav.research">Pesquisa</a></li>
+            <li><a href="publications.html" data-i18n="nav.publications">Publicações</a></li>
+            <li><a href="gallery.html" class="active" data-i18n="nav.gallery">Galeria</a></li>
+            <li><a href="coordinator.html" data-i18n="nav.coordinator">Coordenação</a></li>
+          </ul>
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button class="lang-btn" type="button" data-lang="pt" aria-pressed="true">PT</button>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container fade-in">
+        <header class="page-header">
+          <h1 data-i18n="gallery.title">Galeria</h1>
+          <p data-i18n="gallery.lead">
+            Imagens de atividades, encontros e trabalho de campo do grupo.
+          </p>
+        </header>
+
+        <div class="gallery-grid">
+          <button class="gallery-item" type="button" data-caption-key="gallery.c1">
+            <img src="assets/images/gallery-1.svg" alt="" data-i18n-alt="gallery.c1" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c2">
+            <img src="assets/images/gallery-2.svg" alt="" data-i18n-alt="gallery.c2" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c3">
+            <img src="assets/images/gallery-3.svg" alt="" data-i18n-alt="gallery.c3" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c4">
+            <img src="assets/images/gallery-4.svg" alt="" data-i18n-alt="gallery.c4" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c5">
+            <img src="assets/images/gallery-5.svg" alt="" data-i18n-alt="gallery.c5" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c6">
+            <img src="assets/images/gallery-6.svg" alt="" data-i18n-alt="gallery.c6" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c7">
+            <img src="assets/images/gallery-7.svg" alt="" data-i18n-alt="gallery.c7" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c8">
+            <img src="assets/images/gallery-8.svg" alt="" data-i18n-alt="gallery.c8" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c9">
+            <img src="assets/images/gallery-9.svg" alt="" data-i18n-alt="gallery.c9" width="800" height="600" />
+          </button>
+          <button class="gallery-item" type="button" data-caption-key="gallery.c10">
+            <img src="assets/images/gallery-10.svg" alt="" data-i18n-alt="gallery.c10" width="800" height="600" />
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Lightbox">
+      <div class="lightbox-inner">
+        <button class="lightbox-close" type="button" data-i18n-aria="gallery.close" aria-label="Fechar">
+          ×
+        </button>
+        <img class="lightbox-img" alt="" />
+        <p class="lightbox-caption"></p>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">NUPICC</p>
+          <p data-i18n="footer.tagline">
+            Núcleo de Pesquisa em Informação, Cultura e Comunicação
+          </p>
+          <p>
+            <span data-i18n="footer.contact">Contato:</span>
+            <a href="mailto:contato@nupicc.exemplo.br" data-i18n="footer.email"
+              >contato@nupicc.exemplo.br</a
+            >
+          </p>
+        </div>
+        <p class="footer-note" data-i18n="footer.note">
+          Texto de exemplo — substitua pelo conteúdo real do grupo.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
