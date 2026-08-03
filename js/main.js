@@ -309,7 +309,7 @@ function applyTranslations(lang) {
     }
   });
 
-  const titleKey = document.body.getAttribute("data-title-key");
+  const titleKey = document.body.getAttribute("data-i18n-title");
   if (titleKey && dict[titleKey]) {
     document.title = dict[titleKey];
   }
