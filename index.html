@@ -22,6 +22,7 @@
           <img src="assets/images/logo.png" alt="" width="32" height="32" />
           NuPICC
         </a>
+        <!-- TODO: Review the placement and content of aria- attributes throughout the whole site -->
         <button
           class="nav-toggle"
           type="button"
@@ -34,7 +35,7 @@
           <span class="nav-toggle-bar"></span>
           <span class="nav-toggle-bar"></span>
         </button>
-        <nav class="site-nav" id="site-nav" aria-label="Main">
+        <nav class="site-nav" id="site-nav">
           <ul class="nav-list">
             <li><a href="index.html" class="active" data-i18n="nav.home">Início</a></li>
             <li><a href="team.html" data-i18n="nav.team">Equipe</a></li>
@@ -43,7 +44,7 @@
             <li><a href="gallery.html" data-i18n="nav.gallery">Galeria</a></li>
             <li><a href="coordinator.html" data-i18n="nav.coordinator">Coordenação</a></li>
           </ul>
-          <div class="lang-toggle" role="group" aria-label="Language">
+          <div class="lang-toggle" role="group" data-i18n-aria="lang.toggle">
             <button class="lang-btn" type="button" data-lang="pt" aria-pressed="true">PT</button>
             <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
           </div>

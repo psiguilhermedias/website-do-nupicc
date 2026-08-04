@@ -18,6 +18,8 @@ const translations = {
     "nav.toggle": "Abrir menu",
     "nav.toggleClose": "Fechar menu",
 
+    "lang.toggle": "Idioma",
+
     "footer.tagline": "Núcleo de Pesquisa em Informação, Cultura e Comunicação",
     "footer.contact": "Contato:",
     "footer.email": "contato@nupicc.exemplo.br",
@@ -153,6 +155,8 @@ const translations = {
     "nav.coordinator": "Coordinator",
     "nav.toggle": "Open menu",
     "nav.toggleClose": "Close menu",
+
+    "lang.toggle": "Language",
 
     "footer.tagline": "Research Group on Information, Culture and Communication",
     "footer.contact": "Contact:",
