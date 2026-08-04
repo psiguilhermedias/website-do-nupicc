@@ -318,6 +318,7 @@ function applyTranslations(lang) {
     document.title = dict[titleKey];
   }
 
+  // TODO: Move this logic to language toggle click listener
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     const pressed = btn.getAttribute("data-lang") === lang;
     btn.setAttribute("aria-pressed", pressed ? "true" : "false");
