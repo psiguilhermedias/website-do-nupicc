@@ -1,7 +1,7 @@
 /* NuPICC — i18n, mobile nav, gallery lightbox */
 
 const translations = {
-  pt: {
+  "pt-BR": {
     "meta.title.home": "NuPICC — Página inicial",
     "meta.title.team": "NuPICC — Equipe",
     "meta.title.research": "NuPICC — Pesquisa",
@@ -139,7 +139,7 @@ const translations = {
     "coordinator.email": "marina.silva@nupicc.exemplo.br",
   },
 
-  en: {
+  "en-US": {
     "meta.title.home": "NuPICC — Home",
     "meta.title.team": "NuPICC — Team",
     "meta.title.research": "NuPICC — Research",
@@ -278,85 +278,116 @@ const translations = {
   },
 };
 
-const STORAGE_KEY = "nupicc-lang";
+const LANGUAGE_STORAGE_KEY = "nupicc-language";
 
-function getPreferredLang() {
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "pt" || stored === "en") return stored;
-  const nav = (navigator.language || "").toLowerCase();
-  if (nav.startsWith("pt")) return "pt";
-  return "en";
-}
+function initializeLanguage() {
+  const preferredLanguage = getPreferredLanguage();
 
-function applyTranslations(lang) {
-  const dict = translations[lang] || translations.pt;
-  document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+  document.querySelectorAll(".lang-btn").forEach((languageSelector) => {
+    languageSelector.addEventListener("click", () => {
+      const retrievedLanguage = languageSelector.getAttribute("data-lang");
 
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (dict[key] != null) {
-      el.textContent = dict[key];
-    }
-  });
-
-  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-aria");
-    if (dict[key] != null) {
-      el.setAttribute("aria-label", dict[key]);
-    }
-  });
-
-  document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-alt");
-    if (dict[key] != null) {
-      el.setAttribute("alt", dict[key]);
-    }
-  });
-
-  const titleKey = document.body.getAttribute("data-i18n-title");
-  if (titleKey && dict[titleKey]) {
-    document.title = dict[titleKey];
-  }
-
-  // TODO: Move this logic to language toggle click listener
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    const pressed = btn.getAttribute("data-lang") === lang;
-    btn.setAttribute("aria-pressed", pressed ? "true" : "false");
-  });
-
-  const toggle = document.querySelector(".nav-toggle");
-  if (toggle) {
-    const open = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute(
-      "aria-label",
-      open ? dict["nav.toggleClose"] : dict["nav.toggle"]
-    );
-  }
-}
-
-function setLanguage(lang) {
-  localStorage.setItem(STORAGE_KEY, lang);
-  applyTranslations(lang);
-}
-
-function initLangToggle() {
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const lang = btn.getAttribute("data-lang");
-      if (lang) setLanguage(lang);
+      if (retrievedLanguage) {
+        setCurrentLanguage(retrievedLanguage);
+      }
     });
   });
-  applyTranslations(getPreferredLang());
+
+  applyTranslations(preferredLanguage);
 }
 
-function initMobileNav() {
+function getPreferredLanguage() {
+  const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+
+  if (stored === "pt-BR" || stored === "en-US") {
+    return stored;
+  }
+
+  const navigatorLanguage = (navigator.language || "").toLowerCase();
+
+  if (navigatorLanguage.startsWith("pt")) {
+    return "pt-BR";
+  } else {
+    return "en-US";
+  }
+}
+
+function setCurrentLanguage(language) {
+  localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+
+  applyTranslations(language);
+}
+
+function applyTranslations(language) {
+  const languageTranslations = translations[language] || translations["pt-BR"];
+
+  document.documentElement.lang = language;
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const translationKey = element.getAttribute("data-i18n");
+
+    const translationValue = languageTranslations[translationKey];
+
+    if (translationValue != null) {
+      element.textContent = translationValue;
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+    const translationKey = element.getAttribute("data-i18n-aria");
+
+    const translationValue = languageTranslations[translationKey];
+
+    if (translationValue != null) {
+      element.setAttribute("aria-label", translationValue);
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    const translationKey = element.getAttribute("data-i18n-alt");
+
+    const translationValue = languageTranslations[translationKey];
+
+    if (translationValue != null) {
+      element.setAttribute("alt", translationValue);
+    }
+  });
+
+  const titleTranslationKey = document.body.getAttribute("data-i18n-title");
+
+  const titleTranslationValue = languageTranslations[titleTranslationKey];
+
+  if (titleTranslationValue != null) {
+    document.title = titleTranslationValue;
+  }
+
+  document.querySelectorAll(".lang-btn").forEach((languageSelector) => {
+    const pressed = languageSelector.getAttribute("data-lang") === language;
+
+    languageSelector.setAttribute("aria-pressed", pressed ? "true" : "false");
+  });
+
+  const mobileNavigationToggle = document.querySelector(".nav-toggle");
+
+  if (mobileNavigationToggle) {
+    const mobileNavigationClosed = mobileNavigationToggle.getAttribute("aria-expanded") === "false";
+
+    const mobileNavigationToggleLabel = mobileNavigationClosed
+      ? languageTranslations["nav.toggle"]
+      : languageTranslations["nav.toggleClose"];
+
+    mobileNavigationToggle.setAttribute("aria-label", mobileNavigationToggleLabel);
+  }
+}
+
+function initializeMobileNavigation() {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".site-nav");
   if (!toggle || !nav) return;
 
   const syncLabel = () => {
     const open = toggle.getAttribute("aria-expanded") === "true";
-    const lang = getPreferredLang();
+    const lang = getPreferredLanguage();
     const dict = translations[lang];
     toggle.setAttribute(
       "aria-label",
@@ -388,7 +419,7 @@ function initMobileNav() {
   });
 }
 
-function initLightbox() {
+function initializeLightbox() {
   const lightbox = document.querySelector(".lightbox");
   if (!lightbox) return;
 
@@ -418,7 +449,7 @@ function initLightbox() {
       const thumb = btn.querySelector("img");
       if (!thumb) return;
       const key = btn.getAttribute("data-caption-key");
-      const lang = getPreferredLang();
+      const lang = getPreferredLanguage();
       const text = key && translations[lang][key] ? translations[lang][key] : "";
       open(thumb.src, thumb.alt, text);
     });
@@ -434,7 +465,7 @@ function initLightbox() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initLangToggle();
-  initMobileNav();
-  initLightbox();
+  initializeMobileNavigation();
+  initializeLanguage();
+  initializeLightbox();
 });
