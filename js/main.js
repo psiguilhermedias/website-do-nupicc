@@ -1,13 +1,13 @@
-/* NUPICC — i18n, mobile nav, gallery lightbox */
+/* NuPICC — i18n, mobile nav, gallery lightbox */
 
 const translations = {
   pt: {
-    "meta.title.home": "NUPICC — Página inicial",
-    "meta.title.team": "NUPICC — Equipe",
-    "meta.title.research": "NUPICC — Pesquisa",
-    "meta.title.publications": "NUPICC — Publicações",
-    "meta.title.gallery": "NUPICC — Galeria",
-    "meta.title.coordinator": "NUPICC — Coordenação",
+    "meta.title.home": "NuPICC — Página inicial",
+    "meta.title.team": "NuPICC — Equipe",
+    "meta.title.research": "NuPICC — Pesquisa",
+    "meta.title.publications": "NuPICC — Publicações",
+    "meta.title.gallery": "NuPICC — Galeria",
+    "meta.title.coordinator": "NuPICC — Coordenação",
 
     "nav.home": "Início",
     "nav.team": "Equipe",
@@ -25,7 +25,7 @@ const translations = {
     "footer.email": "contato@nupicc.exemplo.br",
     "footer.note": "Texto de exemplo — substitua pelo conteúdo real do grupo.",
 
-    "home.headline": "Núcleo de Pesquisa em Informação, Cultura e Comunicação",
+    "home.headline": "Núcleo de Pesquisas e Intervenções Cognitivo-Comportamentais",
     "home.lead":
       "O NUPICC é um espaço de colaboração acadêmica que reúne docentes, pesquisadores e estudantes em torno de projetos interdisciplinares sobre circuitos de informação, práticas culturais e processos comunicacionais.",
     "home.ctaResearch": "Ver pesquisas",
@@ -140,12 +140,12 @@ const translations = {
   },
 
   en: {
-    "meta.title.home": "NUPICC — Home",
-    "meta.title.team": "NUPICC — Team",
-    "meta.title.research": "NUPICC — Research",
-    "meta.title.publications": "NUPICC — Publications",
-    "meta.title.gallery": "NUPICC — Gallery",
-    "meta.title.coordinator": "NUPICC — Coordinator",
+    "meta.title.home": "NuPICC — Home",
+    "meta.title.team": "NuPICC — Team",
+    "meta.title.research": "NuPICC — Research",
+    "meta.title.publications": "NuPICC — Publications",
+    "meta.title.gallery": "NuPICC — Gallery",
+    "meta.title.coordinator": "NuPICC — Coordinator",
 
     "nav.home": "Home",
     "nav.team": "Team",
@@ -163,9 +163,9 @@ const translations = {
     "footer.email": "contact@nupicc.example.br",
     "footer.note": "Placeholder text — replace with the group’s real content.",
 
-    "home.headline": "Research Group on Information, Culture and Communication",
+    "home.headline": "Group on Cognitive-Behavioral Research and Interventions",
     "home.lead":
-      "NUPICC is a space for academic collaboration that brings together faculty, researchers and students around interdisciplinary projects on information circuits, cultural practices and communication processes.",
+      "NuPICC is a space for academic collaboration that brings together faculty, researchers and students around interdisciplinary projects on information circuits, cultural practices and communication processes.",
     "home.ctaResearch": "View research",
     "home.ctaTeam": "Meet the team",
     "home.intro":
@@ -201,7 +201,7 @@ const translations = {
       "Supports bibliographic surveys and data organization for ongoing laboratory projects.",
 
     "research.title": "Research",
-    "research.lead": "Projects currently underway at NUPICC.",
+    "research.lead": "Projects currently underway at NuPICC.",
     "research.p1.title": "Information circuits and collective memory",
     "research.p1.body":
       "Maps practices of preservation and circulation of community collections, with emphasis on small institutions and citizen initiatives. The project combines digital ethnography and documentary analysis.",
@@ -261,11 +261,11 @@ const translations = {
 
     "coordinator.title": "Coordinator",
     "coordinator.lead":
-      "Prof. Marina Helena Silva, PhD, coordinates NUPICC and supervises research on information, culture and communication.",
+      "Prof. Marina Helena Silva, PhD, coordinates NuPICC and supervises research on information, culture and communication.",
     "coordinator.p1":
       "Marina Helena Silva is a full professor and researcher whose work focuses on information circulation, cultural policies and qualitative methods. She holds a degree in Social Communication and completed a doctorate with a thesis on memory networks and cultural institutions.",
     "coordinator.p2":
-      "Throughout her career she has led funded projects, published articles and books in the field, and served on editorial boards and scholarly associations. At NUPICC she articulates research lines, fosters inter-institutional partnerships and mentors undergraduate and graduate students.",
+      "Throughout her career she has led funded projects, published articles and books in the field, and served on editorial boards and scholarly associations. At NuPICC she articulates research lines, fosters inter-institutional partnerships and mentors undergraduate and graduate students.",
     "coordinator.p3":
       "Beyond academic work, she takes part in outreach initiatives that connect the lab with community archives, schools and cultural collectives. The text on this page is provisional and should be replaced with an official biography.",
     "coordinator.interestsTitle": "Research interests",
