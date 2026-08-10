@@ -372,49 +372,66 @@ function applyTranslations(language) {
   if (mobileNavigationToggle) {
     const mobileNavigationClosed = mobileNavigationToggle.getAttribute("aria-expanded") === "false";
 
-    const mobileNavigationToggleLabel = mobileNavigationClosed
-      ? languageTranslations["nav.toggle"]
-      : languageTranslations["nav.toggleClose"];
-
-    mobileNavigationToggle.setAttribute("aria-label", mobileNavigationToggleLabel);
+    mobileNavigationToggle.setAttribute(
+      "aria-label",
+      mobileNavigationClosed
+        ? languageTranslations["nav.toggle"]
+        : languageTranslations["nav.toggleClose"]
+    );
   }
 }
 
 function initializeMobileNavigation() {
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".site-nav");
-  if (!toggle || !nav) return;
+  const mobileNavigationToggle = document.querySelector(".nav-toggle");
 
-  const syncLabel = () => {
-    const open = toggle.getAttribute("aria-expanded") === "true";
-    const lang = getPreferredLanguage();
-    const dict = translations[lang];
-    toggle.setAttribute(
+  const navigation = document.querySelector(".site-nav");
+
+  if(!mobileNavigationToggle || !navigation) return;
+
+  const syncAriaLabel = () => {
+    const preferredLanguage = getPreferredLanguage();
+    const preferredLanguageTranslations = translations[preferredLanguage];
+
+    const mobileNavigationClosed = mobileNavigationToggle.getAttribute("aria-expanded") === "false";
+
+    mobileNavigationToggle.setAttribute(
       "aria-label",
-      open ? dict["nav.toggleClose"] : dict["nav.toggle"]
+      mobileNavigationClosed
+        ? preferredLanguageTranslations["nav.toggle"]
+        : preferredLanguageTranslations["nav.toggleClose"]
     );
   };
 
-  toggle.addEventListener("click", () => {
-    const open = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", open ? "false" : "true");
-    nav.classList.toggle("is-open", !open);
-    syncLabel();
+  mobileNavigationToggle.addEventListener("click", () => {
+    const mobileNavigationClosed = mobileNavigationToggle.getAttribute("aria-expanded") === "false";
+    mobileNavigationToggle.setAttribute("aria-expanded", mobileNavigationClosed ? "true" : "false");
+    navigation.classList.toggle("is-open", mobileNavigationClosed);
+    syncAriaLabel();
   });
 
-  nav.querySelectorAll("a").forEach((link) => {
+  navigation.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      toggle.setAttribute("aria-expanded", "false");
-      nav.classList.remove("is-open");
-      syncLabel();
+      mobileNavigationToggle.setAttribute("aria-expanded", "false");
+      navigation.classList.remove("is-open");
+      syncAriaLabel();
     });
   });
 
+  document.addEventListener("click", () => {
+    const clickOutsideNavigation = !(mobileNavigationToggle.contains(event.target) || navigation.contains(event.target));
+  
+    if (clickOutsideNavigation) {
+      mobileNavigationToggle.setAttribute("aria-expanded", "false");
+      navigation.classList.remove("is-open");
+      syncAriaLabel();
+    }
+  });
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && nav.classList.contains("is-open")) {
-      toggle.setAttribute("aria-expanded", "false");
-      nav.classList.remove("is-open");
-      syncLabel();
+    if (e.key === "Escape" && navigation.classList.contains("is-open")) {
+      mobileNavigationToggle.setAttribute("aria-expanded", "false");
+      navigation.classList.remove("is-open");
+      syncAriaLabel();
     }
   });
 }
