@@ -20,65 +20,60 @@ const translations = {
 
     "lang.toggle": "Idioma",
 
-    "footer.tagline": "Núcleo de Pesquisa em Informação, Cultura e Comunicação",
+    "footer.tagline": "Núcleo de Pesquisas e Intervenções Cognitivo-Comportamentais",
     "footer.contact": "Contato:",
-    "footer.email": "contato@nupicc.exemplo.br",
-    "footer.note": "Texto de exemplo — substitua pelo conteúdo real do grupo.",
+    "footer.email": "contato@nupicc.org.br",
+    "footer.note": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus.",
 
     "home.headline": "Núcleo de Pesquisas e Intervenções Cognitivo-Comportamentais",
-    "home.lead":
-      "O NUPICC é um espaço de colaboração acadêmica que reúne docentes, pesquisadores e estudantes em torno de projetos interdisciplinares sobre circuitos de informação, práticas culturais e processos comunicacionais.",
-    "home.ctaResearch": "Ver pesquisas",
-    "home.ctaTeam": "Conhecer a equipe",
-    "home.intro":
-      "Articulamos teoria, método e prática social em estudos que atravessam memória e arquivos, cultura digital, espaços públicos e literacias mediáticas. O núcleo desenvolve pesquisa, formação e extensão, com ênfase em diálogo entre a universidade e a sociedade.",
-    "home.intro2":
-      "Nesta página você encontra a equipe, os projetos em andamento, as publicações do grupo e registros de atividades. O conteúdo ainda é provisório e será atualizado com o material definitivo do núcleo.",
+    "home.lead": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus.",
+    "home.intro": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus.",
+    "home.intro2": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas.",
+    "home.ctaResearch": "Veja as pesquisas",
+    "home.ctaTeam": "Conheça nossa equipe",
 
     "team.title": "Equipe",
-    "team.lead": "Pesquisadores e estudantes vinculados aos projetos do núcleo.",
-    "team.m1.name": "Ana Beatriz Oliveira",
-    "team.m1.role": "Pesquisadora associada",
-    "team.m1.bio":
-      "Interessa-se por políticas de memória e arquivos digitais. Desenvolve pesquisa sobre patrimônio documental e acesso aberto.",
-    "team.m2.name": "Carlos Eduardo Santos",
+    "team.lead": "As pessoas que fazem parte do NUPICC.",
+    "team.m1.name": "Profa. Dra. Ana Cristina Garcia Dias",
+    "team.m1.role": "Coordenadora do grupo",
+    "team.m1.bio": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus.",
+
+    "team.m2.name": "Harry Potter",
     "team.m2.role": "Doutorando",
-    "team.m2.bio":
-      "Estuda ecologias midiáticas e práticas de leitura em ambientes digitais. Participa do projeto sobre circulação de saberes.",
-    "team.m3.name": "Fernanda Lima Rocha",
-    "team.m3.role": "Mestra / pesquisadora",
-    "team.m3.bio":
-      "Trabalha na interface entre comunicação e educação. Coordena atividades de extensão ligadas à alfabetização mediática.",
-    "team.m4.name": "João Pedro Almeida",
+    "team.m2.bio": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus.",
+
+    "team.m3.name": "Hermione Granger",
+    "team.m3.role": "Doutoranda",
+    "team.m3.bio": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus.",
+
+    "team.m4.name": "Ronald Weasley",
     "team.m4.role": "Mestrando",
-    "team.m4.bio":
-      "Investiga narrativas visuais e produção de sentido em espaços urbanos. Colabora na documentação fotográfica do grupo.",
-    "team.m5.name": "Mariana Costa Ribeiro",
-    "team.m5.role": "Pesquisadora visitante",
-    "team.m5.bio":
-      "Dedica-se a estudos comparados de cultura digital na América Latina. Atua em redes internacionais de pesquisa.",
-    "team.m6.name": "Rafael Souza Martins",
-    "team.m6.role": "Bolsista de iniciação científica",
-    "team.m6.bio":
-      "Apoia o levantamento bibliográfico e a organização de dados dos projetos em andamento no laboratório.",
+    "team.m4.bio": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus.",
+
+    "team.m5.name": "Neville Longbottom",
+    "team.m5.role": "Bolsista de iniciação científica",
+    "team.m5.bio": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus.",
+
+    "team.m6.name": "Dra. Luna Lovegood",
+    "team.m6.role": "Pesquisadora visitante",
+    "team.m6.bio": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus.",
 
     "research.title": "Pesquisa",
-    "research.lead": "Projetos em desenvolvimento no NUPICC.",
+    "research.lead": "Projetos de pesquisa em desenvolvimento no NuPICC.",
     "research.p1.title": "Circuitos de informação e memória coletiva",
-    "research.p1.body":
-      "Mapeia práticas de preservação e circulação de acervos comunitários, com ênfase em instituições de pequeno porte e iniciativas cidadãs. O projeto combina etnografia digital e análise documental.",
+    "research.p1.body": "Mapeia práticas de preservação e circulação de acervos comunitários, com ênfase em instituições de pequeno porte e iniciativas cidadãs. O projeto combina etnografia digital e análise documental.",
     "research.p1.k1": "Memória",
     "research.p1.k2": "Arquivos",
     "research.p1.k3": "Acesso",
+
     "research.p2.title": "Cultura digital e espaços públicos",
-    "research.p2.body":
-      "Examina como plataformas e infraestruturas digitais reconfiguram a experiência do espaço público. Inclui estudos de caso em cidades médias e oficinas com coletivos locais.",
+    "research.p2.body": "Examina como plataformas e infraestruturas digitais reconfiguram a experiência do espaço público. Inclui estudos de caso em cidades médias e oficinas com coletivos locais.",
     "research.p2.k1": "Cidade",
     "research.p2.k2": "Plataformas",
     "research.p2.k3": "Participação",
+
     "research.p3.title": "Comunicação, educação e literacias",
-    "research.p3.body":
-      "Desenvolve materiais e metodologias para formação em literacia mediática em contextos escolares e comunitários. O foco está em práticas colaborativas e avaliação formativa.",
+    "research.p3.body": "Desenvolve materiais e metodologias para formação em literacia mediática em contextos escolares e comunitários. O foco está em práticas colaborativas e avaliação formativa.",
     "research.p3.k1": "Educação",
     "research.p3.k2": "Mídia",
     "research.p3.k3": "Formação",
@@ -123,20 +118,17 @@ const translations = {
 
     "coordinator.title": "Coordenação",
     "coordinator.lead":
-      "Profa. Dra. Marina Helena Silva coordena o NUPICC e orienta pesquisas em informação, cultura e comunicação.",
-    "coordinator.p1":
-      "Marina Helena Silva é professora titular e pesquisadora com trajetória voltada aos estudos de circulação da informação, políticas culturais e metodologias qualitativas. Formou-se em Comunicação Social e concluiu o doutorado com tese sobre redes de memória e instituições culturais.",
-    "coordinator.p2":
-      "Ao longo da carreira, coordenou projetos financiados por agências de fomento, publicou artigos e livros na área e atuou em comitês editoriais e associações científicas. No NUPICC, articula linhas de pesquisa, fomenta parcerias interinstitucionais e acompanha a formação de estudantes de graduação e pós-graduação.",
-    "coordinator.p3":
-      "Além da atividade acadêmica, participa de iniciativas de extensão que aproximam o laboratório de arquivos comunitários, escolas e coletivos culturais. O texto desta página é provisório e deve ser substituído por uma biografia oficial.",
+      "Profa. Dra. Ana Cristina Garcia Dias coordena o NuPICC e lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
+    "coordinator.p1": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla.",
+    "coordinator.p2": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla.",
+    "coordinator.p3": "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla.",
     "coordinator.interestsTitle": "Interesses de pesquisa",
     "coordinator.i1": "Políticas de memória e arquivos",
     "coordinator.i2": "Cultura digital e espaço público",
     "coordinator.i3": "Metodologias qualitativas e etnografia digital",
     "coordinator.i4": "Formação e literacia mediática",
     "coordinator.contact": "E-mail:",
-    "coordinator.email": "marina.silva@nupicc.exemplo.br",
+    "coordinator.email": "ana@nupicc.org.br",
   },
 
   "en-US": {
