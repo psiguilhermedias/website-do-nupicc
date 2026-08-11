@@ -29,9 +29,9 @@
   --space-xl: 4rem;
   --space-2xl: 6rem;
 
-  --max-width: 68rem;
+  --max-width: 62rem;
   --prose-width: 42rem;
-  --header-h: 4rem;
+  --header-h: 8rem;
   --radius: 2px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -162,7 +162,7 @@ p:last-child {
 }
 
 .brand img {
-  height: 2rem;
+  height: 4rem;
   width: auto;
   flex-shrink: 0;
 }
@@ -228,7 +228,7 @@ p:last-child {
 .nav-list a {
   text-decoration: none;
   color: var(--ink-soft);
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   font-weight: 600;
   padding: 0.35rem 0.4rem;
   border-bottom: 2px solid transparent;
@@ -736,7 +736,7 @@ main {
 
 /* ——— Responsive ——— */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav-toggle {
     display: flex;
   }
