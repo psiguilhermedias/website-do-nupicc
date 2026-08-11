@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body data-i18n-title="meta.title.gallery">
+  <body>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="index.html"><img src="assets/images/logo.png" alt="" width="32" height="32" />NU<span>PICC</span></a>
@@ -22,7 +22,6 @@
           type="button"
           aria-expanded="false"
           aria-controls="site-nav"
-          data-i18n-aria="nav.toggle"
         >
           <span class="nav-toggle-bar"></span>
           <span class="nav-toggle-bar"></span>
@@ -30,17 +29,13 @@
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Main">
           <ul class="nav-list">
-            <li><a href="index.html" data-i18n="nav.home">Início</a></li>
-            <li><a href="team.html" data-i18n="nav.team">Equipe</a></li>
-            <li><a href="research.html" data-i18n="nav.research">Pesquisa</a></li>
-            <li><a href="publications.html" data-i18n="nav.publications">Publicações</a></li>
-            <li><a href="gallery.html" class="active" data-i18n="nav.gallery">Galeria</a></li>
-            <li><a href="coordinator.html" data-i18n="nav.coordinator">Coordenação</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="team.html">Equipe</a></li>
+            <li><a href="research.html">Pesquisa</a></li>
+            <li><a href="publications.html">Publicações</a></li>
+            <li><a href="gallery.html" class="active">Galeria</a></li>
+            <li><a href="coordinator.html">Coordenação</a></li>
           </ul>
-          <div class="lang-toggle" role="group" data-i18n-aria="lang.toggle">
-            <button class="lang-btn" type="button" data-lang="pt" aria-pressed="true">PT</button>
-            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
-          </div>
         </nav>
       </div>
     </header>
@@ -48,42 +43,42 @@
     <main>
       <div class="container fade-in">
         <header class="page-header">
-          <h1 data-i18n="gallery.title">Galeria</h1>
-          <p data-i18n="gallery.lead">
+          <h1>Galeria</h1>
+          <p>
             Imagens de atividades, encontros e trabalho de campo do grupo.
           </p>
         </header>
 
         <div class="gallery-grid">
           <button class="gallery-item" type="button" data-caption-key="gallery.c1">
-            <img src="assets/images/gallery-1.svg" alt="" data-i18n-alt="gallery.c1" width="800" height="600" />
+            <img src="assets/images/gallery-1.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c2">
-            <img src="assets/images/gallery-2.svg" alt="" data-i18n-alt="gallery.c2" width="800" height="600" />
+            <img src="assets/images/gallery-2.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c3">
-            <img src="assets/images/gallery-3.svg" alt="" data-i18n-alt="gallery.c3" width="800" height="600" />
+            <img src="assets/images/gallery-3.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c4">
-            <img src="assets/images/gallery-4.svg" alt="" data-i18n-alt="gallery.c4" width="800" height="600" />
+            <img src="assets/images/gallery-4.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c5">
-            <img src="assets/images/gallery-5.svg" alt="" data-i18n-alt="gallery.c5" width="800" height="600" />
+            <img src="assets/images/gallery-5.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c6">
-            <img src="assets/images/gallery-6.svg" alt="" data-i18n-alt="gallery.c6" width="800" height="600" />
+            <img src="assets/images/gallery-6.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c7">
-            <img src="assets/images/gallery-7.svg" alt="" data-i18n-alt="gallery.c7" width="800" height="600" />
+            <img src="assets/images/gallery-7.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c8">
-            <img src="assets/images/gallery-8.svg" alt="" data-i18n-alt="gallery.c8" width="800" height="600" />
+            <img src="assets/images/gallery-8.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c9">
-            <img src="assets/images/gallery-9.svg" alt="" data-i18n-alt="gallery.c9" width="800" height="600" />
+            <img src="assets/images/gallery-9.svg" alt="" width="800" height="600" />
           </button>
           <button class="gallery-item" type="button" data-caption-key="gallery.c10">
-            <img src="assets/images/gallery-10.svg" alt="" data-i18n-alt="gallery.c10" width="800" height="600" />
+            <img src="assets/images/gallery-10.svg" alt="" width="800" height="600" />
           </button>
         </div>
       </div>
@@ -91,7 +86,7 @@
 
     <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Lightbox">
       <div class="lightbox-inner">
-        <button class="lightbox-close" type="button" data-i18n-aria="gallery.close" aria-label="Fechar">
+        <button class="lightbox-close" type="button" aria-label="Fechar">
           ×
         </button>
         <img class="lightbox-image" alt="" />
@@ -103,17 +98,17 @@
       <div class="footer-inner">
         <div>
           <p class="footer-brand">NUPICC</p>
-          <p data-i18n="footer.tagline">
+          <p>
             Núcleo de Pesquisa em Informação, Cultura e Comunicação
           </p>
           <p>
-            <span data-i18n="footer.contact">Contato:</span>
-            <a href="mailto:contato@nupicc.exemplo.br" data-i18n="footer.email"
+            <span>Contato:</span>
+            <a href="mailto:contato@nupicc.exemplo.br"
               >contato@nupicc.exemplo.br</a
             >
           </p>
         </div>
-        <p class="footer-note" data-i18n="footer.note">
+        <p class="footer-note">
           Texto de exemplo — substitua pelo conteúdo real do grupo.
         </p>
       </div>
