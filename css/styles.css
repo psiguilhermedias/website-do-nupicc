@@ -29,8 +29,8 @@
   --space-xl: 4rem;
   --space-2xl: 6rem;
 
-  --max-width: 62rem;
-  --prose-width: 42rem;
+  --wide-max-width: 62rem;
+  --main-max-width: 60rem;
   --header-h: 8rem;
   --radius: 2px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -138,7 +138,7 @@ p:last-child {
 }
 
 .header-inner {
-  max-width: var(--max-width);
+  max-width: var(--wide-max-width);
   margin: 0 auto;
   padding: 0 var(--space-md);
   height: 100%;
@@ -304,7 +304,7 @@ main {
 }
 
 .container {
-  max-width: var(--max-width);
+  max-width: var(--main-max-width);
   margin: 0 auto;
   padding: var(--space-xl) var(--space-md);
 }
@@ -314,7 +314,6 @@ main {
 }
 
 .page-header {
-  max-width: var(--prose-width);
   margin-bottom: var(--space-lg);
 }
 
@@ -448,7 +447,6 @@ main {
 }
 
 .member-body {
-  max-width: var(--prose-width);
   min-width: 0;
 }
 
@@ -483,7 +481,6 @@ main {
 .project {
   padding-bottom: var(--space-lg);
   border-bottom: 1px solid var(--sand);
-  max-width: var(--prose-width);
 }
 
 .project:last-child {
@@ -522,7 +519,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0;
-  max-width: var(--prose-width);
 }
 
 .pub-item {
@@ -662,10 +658,6 @@ main {
   object-fit: cover;
 }
 
-.coordinator-body {
-  max-width: var(--prose-width);
-}
-
 .coordinator-body .lead {
   font-size: 1.15rem;
   color: var(--ink-soft);
@@ -699,7 +691,7 @@ main {
 }
 
 .footer-inner {
-  max-width: var(--max-width);
+  max-width: var(--wide-max-width);
   margin: 0 auto;
   padding: var(--space-lg) var(--space-md);
   display: flex;
