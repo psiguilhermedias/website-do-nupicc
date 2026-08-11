@@ -190,6 +190,26 @@ p:last-child {
   gap: 5px;
 }
 
+.nav-toggle i {
+  font-size: 1.5rem;
+}
+
+.nav-toggle[aria-expanded="true"] .ph-list {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .ph-x {
+  display: block;
+}
+
+.nav-toggle[aria-expanded="false"] .ph-list {
+  display: block;
+}
+
+.nav-toggle[aria-expanded="false"] .ph-x {
+  display: none;
+}
+
 .nav-toggle-bar {
   display: block;
   width: 1.1rem;

@@ -12,6 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
     />
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -21,17 +27,11 @@
           <img src="assets/images/logo-nupicc.svg" alt="" width="32" height="32" />
         </a>
 
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <!-- TODO: This is a CSS hamburger menu icon; we should use a proper icon -->
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <i class="ph ph-list"></i>
+          <i class="ph ph-x"></i>
         </button>
+
         <nav class="site-nav" id="site-nav">
           <ul class="nav-list">
             <li><a href="index.html" class="active">Início</a></li>
