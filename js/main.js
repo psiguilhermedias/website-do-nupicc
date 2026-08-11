@@ -419,8 +419,8 @@ function initializeMobileNavigation() {
     }
   });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && navigation.classList.contains("is-open")) {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navigation.classList.contains("is-open")) {
       mobileNavigationToggle.setAttribute("aria-expanded", "false");
       navigation.classList.remove("is-open");
       syncAriaLabel();
@@ -430,46 +430,56 @@ function initializeMobileNavigation() {
 
 function initializeLightbox() {
   const lightbox = document.querySelector(".lightbox");
+
   if (!lightbox) return;
 
-  const img = lightbox.querySelector(".lightbox-img");
+  const image = lightbox.querySelector(".lightbox-image");
   const caption = lightbox.querySelector(".lightbox-caption");
-  const closeBtn = lightbox.querySelector(".lightbox-close");
+  const closeButton = lightbox.querySelector(".lightbox-close");
 
-  function open(src, alt, captionText) {
-    img.src = src;
-    img.alt = alt || "";
+  const open = (source, altText, captionText) => {
+    image.src = source;
+    image.alt = altText || "";
     caption.textContent = captionText || "";
-    lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
-    closeBtn.focus();
+    lightbox.classList.add("is-open");
+    closeButton.focus();
     document.body.style.overflow = "hidden";
   }
 
-  function close() {
-    lightbox.classList.remove("is-open");
+  const close = () => {
     lightbox.setAttribute("aria-hidden", "true");
-    img.removeAttribute("src");
+    lightbox.classList.remove("is-open");
+    image.removeAttribute("src");
     document.body.style.overflow = "";
   }
 
-  document.querySelectorAll(".gallery-item").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const thumb = btn.querySelector("img");
-      if (!thumb) return;
-      const key = btn.getAttribute("data-caption-key");
-      const lang = getPreferredLanguage();
-      const text = key && translations[lang][key] ? translations[lang][key] : "";
-      open(thumb.src, thumb.alt, text);
+  document.querySelectorAll(".gallery-item").forEach((galleryItem) => {
+    galleryItem.addEventListener("click", () => {
+      const thumbnailImage = galleryItem.querySelector("img");
+
+      if (!thumbnailImage) return;
+
+      const preferredLanguage = getPreferredLanguage();
+      const preferredLanguageTranslations = translations[preferredLanguage];
+
+      const captionTranslationKey = galleryItem.getAttribute("data-caption-key");
+
+      const captionText = captionTranslationKey && preferredLanguageTranslations[captionTranslationKey]
+        ? preferredLanguageTranslations[captionTranslationKey]
+        : "";
+
+      open(thumbnailImage.src, thumbnailImage.alt, captionText);
     });
   });
 
-  closeBtn.addEventListener("click", close);
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) close();
+  closeButton.addEventListener("click", close);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) close();
   });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lightbox.classList.contains("is-open")) close();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) close();
   });
 }
 
