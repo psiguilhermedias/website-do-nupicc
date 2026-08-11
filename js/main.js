@@ -7,32 +7,16 @@ function initializeMobileNavigation() {
 
   if(!mobileNavigationToggle || !navigation) return;
 
-  const syncAriaLabel = () => {
-    const preferredLanguage = getPreferredLanguage();
-    const preferredLanguageTranslations = translations[preferredLanguage];
-
-    const mobileNavigationClosed = mobileNavigationToggle.getAttribute("aria-expanded") === "false";
-
-    mobileNavigationToggle.setAttribute(
-      "aria-label",
-      mobileNavigationClosed
-        ? preferredLanguageTranslations["nav.toggle"]
-        : preferredLanguageTranslations["nav.toggleClose"]
-    );
-  };
-
   mobileNavigationToggle.addEventListener("click", () => {
     const mobileNavigationClosed = mobileNavigationToggle.getAttribute("aria-expanded") === "false";
     mobileNavigationToggle.setAttribute("aria-expanded", mobileNavigationClosed ? "true" : "false");
     navigation.classList.toggle("is-open", mobileNavigationClosed);
-    syncAriaLabel();
   });
 
   navigation.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       mobileNavigationToggle.setAttribute("aria-expanded", "false");
       navigation.classList.remove("is-open");
-      syncAriaLabel();
     });
   });
 
@@ -42,7 +26,6 @@ function initializeMobileNavigation() {
     if (clickOutsideNavigation) {
       mobileNavigationToggle.setAttribute("aria-expanded", "false");
       navigation.classList.remove("is-open");
-      syncAriaLabel();
     }
   });
 
@@ -50,7 +33,6 @@ function initializeMobileNavigation() {
     if (event.key === "Escape" && navigation.classList.contains("is-open")) {
       mobileNavigationToggle.setAttribute("aria-expanded", "false");
       navigation.classList.remove("is-open");
-      syncAriaLabel();
     }
   });
 }
@@ -83,20 +65,9 @@ function initializeLightbox() {
 
   document.querySelectorAll(".gallery-item").forEach((galleryItem) => {
     galleryItem.addEventListener("click", () => {
-      const thumbnailImage = galleryItem.querySelector("img");
-
-      if (!thumbnailImage) return;
-
-      const preferredLanguage = getPreferredLanguage();
-      const preferredLanguageTranslations = translations[preferredLanguage];
-
-      const captionTranslationKey = galleryItem.getAttribute("data-caption-key");
-
-      const captionText = captionTranslationKey && preferredLanguageTranslations[captionTranslationKey]
-        ? preferredLanguageTranslations[captionTranslationKey]
-        : "";
-
-      open(thumbnailImage.src, thumbnailImage.alt, captionText);
+      const thumb = galleryItem.querySelector("img");
+      const caption = galleryItem.getAttribute("data-caption") || "";
+      open(thumb.src, thumb.alt, caption);
     });
   });
 
