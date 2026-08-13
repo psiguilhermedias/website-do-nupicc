@@ -858,6 +858,10 @@ main {
   .footer-block {
     height: auto;
   }
+
+  .footer-block--text {
+    padding: var(--space-sm) 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
