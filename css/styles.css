@@ -544,9 +544,10 @@ main {
 }
 
 .pub-title {
-  font-weight: 600;
-  color: var(--ink);
   margin-bottom: 0.25rem;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .pub-authors,
