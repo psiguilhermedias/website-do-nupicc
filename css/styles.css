@@ -271,37 +271,6 @@ p:last-child {
   border-bottom-color: var(--brand);
 }
 
-.lang-toggle {
-  display: flex;
-  gap: 0;
-  border: 1px solid var(--sand);
-  background: var(--white);
-  flex-shrink: 0;
-}
-
-.lang-btn {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 0.4rem 0.65rem;
-  border: none;
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.lang-btn[aria-pressed="true"] {
-  background: var(--brand);
-  color: var(--white);
-}
-
-.lang-btn:hover:not([aria-pressed="true"]) {
-  color: var(--ink);
-  background: var(--accent-warm);
-}
-
 /* ——— Main / layout ——— */
 
 main {
@@ -821,10 +790,6 @@ main {
   .nav-list a.active {
     border-bottom-color: var(--sand);
     box-shadow: inset 3px 0 0 var(--brand);
-  }
-
-  .lang-toggle {
-    align-self: flex-start;
   }
 
   .coordinator {
