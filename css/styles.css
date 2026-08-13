@@ -506,10 +506,15 @@ main {
 }
 
 .pub-year {
+  grid-column: 1;
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--brand);
   font-size: 1.1rem;
+}
+
+.pub-item > div {
+  grid-column: 2;
 }
 
 .pub-title {
