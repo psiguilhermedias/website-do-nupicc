@@ -120,18 +120,6 @@ p:last-child {
   margin-bottom: 0;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 /* ——— Header ——— */
 
 .site-header {
@@ -440,9 +428,30 @@ main {
   margin: 0.15rem 0 var(--space-sm);
 }
 
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.15rem;
+  margin-top: var(--space-sm);
+}
+
+.member-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.member-link i {
+  font-size: 1.15em;
+}
+
 .member-bio {
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: var(--font-size-md);
   line-height: 1.7;
 }
 
