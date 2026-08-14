@@ -548,7 +548,7 @@ main {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-sm);
 }
 
@@ -584,7 +584,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-md);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s var(--ease), visibility 0.3s;
@@ -826,6 +825,10 @@ main {
   .pub-item {
     grid-template-columns: 1fr;
     gap: var(--space-xs);
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 
   .footer-content {
